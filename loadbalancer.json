@@ -64,7 +64,7 @@
             "location": "[parameters('location')]",
             "copy": {
                 "name": "networkInterfaceCopy",
-                "count": 3
+                "count": 1
             },
             "dependsOn": [
                 "[resourceId('Microsoft.Network/virtualNetworks', variables('vNetName'))]",
@@ -104,7 +104,7 @@
             "location": "[parameters('location')]",
             "copy": {
                 "name": "extensionCopy",
-                "count": 3
+                "count": 1
             },
             "dependsOn": [
                 "vmCopy"
@@ -129,7 +129,7 @@
             ],
             "copy": {
                 "name": "vmCopy",
-                "count": 3
+                "count": 1
             },
             "dependsOn": [
                 "networkInterfaceCopy"
